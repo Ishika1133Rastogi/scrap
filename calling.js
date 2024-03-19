@@ -20,7 +20,12 @@ const fs = require('fs');
 const { URL } = require('url');
 const cheerio = require('cheerio');
 
-
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+};
+ 
+app.use(cors(corsOptions));
 
 //DATABASE
 
