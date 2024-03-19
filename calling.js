@@ -153,7 +153,7 @@ app.put('/api/update-ischecked', async (req, res) => {
 // Define the API endpoint
 app.get('/api/get-checked-urls/:id', async (req, res) => {
   try {
-    const id=req.params.id;
+    const id=req.params.id.trim();
     const user = await Base.findById(id);
 
     if (!user) {
